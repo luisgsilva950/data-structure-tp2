@@ -20,14 +20,13 @@ bool mustSwap(const Civilization &c1, const Civilization &c2) {
     }
 }
 
-void quicksort(vector<Civilization> &vec, int L, int R) {
+void quickSort(vector<Civilization> &vec, int L, int R) {
     int i, j, mid;
     Civilization piv;
     i = L;
     j = R - 1;
     mid = L + (R - L) / 2;
     piv = vec[mid];
-
     while (i <= j) {
         while (mustSwap(vec[i], piv) && i < R) i++;
         while (mustSwap(piv, vec[j]) && j > L) j--;
@@ -37,9 +36,8 @@ void quicksort(vector<Civilization> &vec, int L, int R) {
             j--;
         }
     }
-
-    if (i < R) quicksort(vec, i, R);
-    if (j > L) quicksort(vec, L, j + 1);
+    if (i < R) quickSort(vec, i, R);
+    if (j > L) quickSort(vec, L, j + 1);
 }
 
 int main() {
@@ -53,11 +51,10 @@ int main() {
         civilizations.push_back(new Civilization(input, distance, size));
     }
     int MAX_LENGTH = civilizations.size();
-    quicksort(civilizations, 0, MAX_LENGTH);
+    quickSort(civilizations, 0, MAX_LENGTH);
     for (auto &&civilization : civilizations) {
-        printf("%s %i %i\n", civilization.getName().c_str(), civilization.getDistance(), civilization.getSize());
+        cout << civilization.getName().c_str() << " " << civilization.getDistance() << " " << civilization.getSize() << "\n";
     }
-
     return 0;
 }
 

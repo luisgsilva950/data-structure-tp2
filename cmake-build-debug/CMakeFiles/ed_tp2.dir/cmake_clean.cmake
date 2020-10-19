@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ed_tp2.dir/main.cc.o"
-  "CMakeFiles/ed_tp2.dir/models/civilization/Civilization.cpp.o"
+  "CMakeFiles/ed_tp2.dir/src_ordenacao_alianca_rebelde_algoritmo1/main.cc.o"
+  "CMakeFiles/ed_tp2.dir/src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp.o"
   "ed_tp2"
   "ed_tp2.pdb"
 )

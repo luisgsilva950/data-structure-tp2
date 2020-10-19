@@ -6,17 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/luis/CLionProjects/ed-tp2/main.cc
+/Users/strider/Documents/ed-tp2/src_ordenacao_alianca_rebelde_algoritmo1/main.cc
 iostream
--
-sstream
 -
 vector
 -
 models/civilization/Civilization.h
-/home/luis/CLionProjects/ed-tp2/models/civilization/Civilization.h
+/Users/strider/Documents/ed-tp2/src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.h
+models/civilization/Civilization.cpp
+/Users/strider/Documents/ed-tp2/src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp
 
-/home/luis/CLionProjects/ed-tp2/models/civilization/Civilization.h
+/Users/strider/Documents/ed-tp2/src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp
+Civilization.h
+/Users/strider/Documents/ed-tp2/src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.h
+utility
+-
+
+/Users/strider/Documents/ed-tp2/src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.h
 string
 -
 

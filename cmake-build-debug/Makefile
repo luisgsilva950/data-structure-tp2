@@ -59,38 +59,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /app/extra/clion/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /app/extra/clion/bin/cmake/linux/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/luis/CLionProjects/ed-tp2
+CMAKE_SOURCE_DIR = /Users/strider/Documents/ed-tp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/luis/CLionProjects/ed-tp2/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/strider/Documents/ed-tp2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/app/extra/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/app/extra/clion/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -98,11 +87,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luis/CLionProjects/ed-tp2/cmake-build-debug/CMakeFiles /home/luis/CLionProjects/ed-tp2/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/strider/Documents/ed-tp2/cmake-build-debug/CMakeFiles /Users/strider/Documents/ed-tp2/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luis/CLionProjects/ed-tp2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/strider/Documents/ed-tp2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,59 +143,59 @@ ed_tp2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp2.dir/build.make CMakeFiles/ed_tp2.dir/build
 .PHONY : ed_tp2/fast
 
-main.o: main.cc.o
+src_ordenacao_alianca_rebelde_algoritmo1/main.o: src_ordenacao_alianca_rebelde_algoritmo1/main.cc.o
 
-.PHONY : main.o
-
-# target to build an object file
-main.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp2.dir/build.make CMakeFiles/ed_tp2.dir/main.cc.o
-.PHONY : main.cc.o
-
-main.i: main.cc.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp2.dir/build.make CMakeFiles/ed_tp2.dir/main.cc.i
-.PHONY : main.cc.i
-
-main.s: main.cc.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp2.dir/build.make CMakeFiles/ed_tp2.dir/main.cc.s
-.PHONY : main.cc.s
-
-models/civilization/Civilization.o: models/civilization/Civilization.cpp.o
-
-.PHONY : models/civilization/Civilization.o
+.PHONY : src_ordenacao_alianca_rebelde_algoritmo1/main.o
 
 # target to build an object file
-models/civilization/Civilization.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp2.dir/build.make CMakeFiles/ed_tp2.dir/models/civilization/Civilization.cpp.o
-.PHONY : models/civilization/Civilization.cpp.o
+src_ordenacao_alianca_rebelde_algoritmo1/main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp2.dir/build.make CMakeFiles/ed_tp2.dir/src_ordenacao_alianca_rebelde_algoritmo1/main.cc.o
+.PHONY : src_ordenacao_alianca_rebelde_algoritmo1/main.cc.o
 
-models/civilization/Civilization.i: models/civilization/Civilization.cpp.i
+src_ordenacao_alianca_rebelde_algoritmo1/main.i: src_ordenacao_alianca_rebelde_algoritmo1/main.cc.i
 
-.PHONY : models/civilization/Civilization.i
+.PHONY : src_ordenacao_alianca_rebelde_algoritmo1/main.i
 
 # target to preprocess a source file
-models/civilization/Civilization.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp2.dir/build.make CMakeFiles/ed_tp2.dir/models/civilization/Civilization.cpp.i
-.PHONY : models/civilization/Civilization.cpp.i
+src_ordenacao_alianca_rebelde_algoritmo1/main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp2.dir/build.make CMakeFiles/ed_tp2.dir/src_ordenacao_alianca_rebelde_algoritmo1/main.cc.i
+.PHONY : src_ordenacao_alianca_rebelde_algoritmo1/main.cc.i
 
-models/civilization/Civilization.s: models/civilization/Civilization.cpp.s
+src_ordenacao_alianca_rebelde_algoritmo1/main.s: src_ordenacao_alianca_rebelde_algoritmo1/main.cc.s
 
-.PHONY : models/civilization/Civilization.s
+.PHONY : src_ordenacao_alianca_rebelde_algoritmo1/main.s
 
 # target to generate assembly for a file
-models/civilization/Civilization.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp2.dir/build.make CMakeFiles/ed_tp2.dir/models/civilization/Civilization.cpp.s
-.PHONY : models/civilization/Civilization.cpp.s
+src_ordenacao_alianca_rebelde_algoritmo1/main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp2.dir/build.make CMakeFiles/ed_tp2.dir/src_ordenacao_alianca_rebelde_algoritmo1/main.cc.s
+.PHONY : src_ordenacao_alianca_rebelde_algoritmo1/main.cc.s
+
+src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.o: src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp.o
+
+.PHONY : src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.o
+
+# target to build an object file
+src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp2.dir/build.make CMakeFiles/ed_tp2.dir/src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp.o
+.PHONY : src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp.o
+
+src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.i: src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp.i
+
+.PHONY : src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.i
+
+# target to preprocess a source file
+src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp2.dir/build.make CMakeFiles/ed_tp2.dir/src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp.i
+.PHONY : src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp.i
+
+src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.s: src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp.s
+
+.PHONY : src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.s
+
+# target to generate assembly for a file
+src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp2.dir/build.make CMakeFiles/ed_tp2.dir/src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp.s
+.PHONY : src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.cpp.s
 
 # Help Target
 help:
@@ -206,12 +206,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ed_tp2"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... models/civilization/Civilization.o"
-	@echo "... models/civilization/Civilization.i"
-	@echo "... models/civilization/Civilization.s"
+	@echo "... src_ordenacao_alianca_rebelde_algoritmo1/main.o"
+	@echo "... src_ordenacao_alianca_rebelde_algoritmo1/main.i"
+	@echo "... src_ordenacao_alianca_rebelde_algoritmo1/main.s"
+	@echo "... src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.o"
+	@echo "... src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.i"
+	@echo "... src_ordenacao_alianca_rebelde_algoritmo1/models/civilization/Civilization.s"
 .PHONY : help
 
 
