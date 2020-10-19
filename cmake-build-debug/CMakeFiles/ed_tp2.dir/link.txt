@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/ed_tp2.dir/main.cc.o CMakeFiles/ed_tp2.dir/models/civilization/Civilization.cpp.o  -o ed_tp2 

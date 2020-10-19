@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/luis/CLionProjects/ed-tp2/main.cc
+iostream
+-
+sstream
+-
+vector
+-
+models/civilization/Civilization.h
+/home/luis/CLionProjects/ed-tp2/models/civilization/Civilization.h
+
+/home/luis/CLionProjects/ed-tp2/models/civilization/Civilization.h
+string
+-
+
