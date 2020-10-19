@@ -12,8 +12,8 @@ void swap(vector<Civilization> &v, int x, int y) {
 }
 
 bool mustSwap(const Civilization &c1, const Civilization &c2) {
-    if (c1.getDistance() > c2.getDistance()) return true;
-    else if (c1.getDistance() < c2.getDistance()) return false;
+    if (c1.getDistance() < c2.getDistance()) return true;
+    else if (c1.getDistance() > c2.getDistance()) return false;
     else {
         if (c1.getSize() > c2.getSize()) return true;
         else return false;
