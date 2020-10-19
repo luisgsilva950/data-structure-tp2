@@ -18,10 +18,10 @@ void heapify(vector<Civilization> &vec, int n, int i) {
     int largest = i;
     int l = 2 * i + 1;
     int r = 2 * i + 2;
-    if (l < n && mustSwap(vec[l], vec[largest]))
+    if (l < n && !mustSwap(vec[l], vec[largest]))
         largest = l;
 
-    if (r < n && mustSwap(vec[r], vec[largest]))
+    if (r < n && !mustSwap(vec[r], vec[largest]))
         largest = r;
     if (largest != i) {
         swap(vec[i], vec[largest]);
@@ -91,7 +91,7 @@ int main() {
     while (scanf("%s %i %i", &input, &distance, &size) != EOF) {
         civilizations.push_back(new Civilization(input, distance, size));
     }
-    int MAX_LENGTH = civilizations.size() - 1;
+    int MAX_LENGTH = civilizations.size();
     heapSort(civilizations, MAX_LENGTH);
     for (auto &&civilization : civilizations) {
         cout << civilization.getName().c_str() << " " << civilization.getDistance() << " " << civilization.getSize()
