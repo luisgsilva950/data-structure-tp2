@@ -14,44 +14,47 @@ bool mustSwap(const Civilization &c1, const Civilization &c2) {
     }
 }
 
-void merge(vector<Civilization> &vec, int low, int high, int mid) {
-    int i, j, k;
-    Civilization c[vec.size()];
-    i = low;
-    k = low;
-    j = mid + 1;
-    while (i <= mid && j <= high) {
-        if (!mustSwap(vec[i], vec[j])) {
-            c[k] = vec[i];
-            k++;
+void merge(vector<Civilization> &vec, int l, int m, int r) {
+    int n1 = m - l + 1;
+    int n2 = r - m;
+
+    vector<Civilization> L(n1), R(n2);
+
+    for (int i = 0; i < n1; i++) L[i] = vec[l + i];
+    for (int j = 0; j < n2; j++) R[j] = vec[m + 1 + j];
+
+    int i = 0;
+    int j = 0;
+    int k = l;
+
+    while (i < n1 && j < n2) {
+        if (mustSwap(L[i], R[j])) {
+            vec[k] = L[i];
             i++;
         } else {
-            c[k] = vec[j];
-            k++;
+            vec[k] = R[j];
             j++;
         }
-    }
-    while (i <= mid) {
-        c[k] = vec[i];
         k++;
+    }
+    while (i < n1) {
+        vec[k] = L[i];
         i++;
-    }
-    while (j <= high) {
-        c[k] = vec[j];
         k++;
-        j++;
     }
-    for (i = low; i < k; i++) {
-        vec[i] = c[i];
+    while (j < n2) {
+        vec[k] = R[j];
+        j++;
+        k++;
     }
 }
 
-void mergeSort(vector<Civilization> &vec, int L, int R) {
-    if (L < R) {
-        int m = (L + R) / 2;
-        mergeSort(vec, L, m);
-        mergeSort(vec, m + 1, R);
-        merge(vec, L, R, m);
+void mergeSort(vector<Civilization> &vec, int l, int r) {
+    if (l < r) {
+        int m = l + (r - l) / 2;
+        mergeSort(vec, l, m);
+        mergeSort(vec, m + 1, r);
+        merge(vec, l, m, r);
     }
 }
 
