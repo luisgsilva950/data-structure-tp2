@@ -16,12 +16,12 @@ bool mustSwap(const Civilization &c1, const Civilization &c2) {
 
 void merge(vector<Civilization> &vec, int low, int high, int mid) {
     int i, j, k;
-    Civilization c[vec.size()];
+    vector<Civilization> c(vec.size());
     i = low;
     k = low;
     j = mid + 1;
     while (i <= mid && j <= high) {
-        if (!mustSwap(vec[i], vec[j])) {
+        if (mustSwap(vec[i], vec[j])) {
             c[k] = vec[i];
             k++;
             i++;
