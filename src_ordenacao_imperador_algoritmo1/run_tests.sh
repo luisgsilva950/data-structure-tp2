@@ -3,7 +3,7 @@ TMP_OUT=$2
 
 for i in {0..6..1}; do
   testname=$(printf "%d" "$i")
-  $EXEC < ../tests/$testname.in > $TMP_OUT
+  time $EXEC < ../tests/$testname.in > $TMP_OUT
   if ! diff -qwB ../tests/$testname.out $TMP_OUT &>/dev/null; then
     echo "Test $testname failed"
   else
